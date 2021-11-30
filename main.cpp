@@ -1,22 +1,13 @@
 #include <iostream>
-#include "lib.h"
-#include <algorithm>
 using namespace std;
+#include "lib.h"
 
 int main(){
-  char a=0;
-  cin>>a;
-  if (funzione(a)==false){
-    cout<< "errore"" << endl;
-    }
-  else{
-    int ascii=a;
-    if (97<= a){
-      ascii= toupper(a);
-      cout<< char(ascii)<< endl;
-    }else if (65<= ascii <=90){
-      cout<< char (tolower(a)) << endl;
-    }
-  }
-  return 0;
+    char let;
+    cin >> let;
+    if ((let >= 'a' && let <= 'z') || (let>='A' && let<='Z')){
+    char res1= funzione(let);
+    cout << res1 << endl;
+}else{
+    cout << "errore"<<endl;}
 }
